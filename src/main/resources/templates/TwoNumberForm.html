@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>Adding Two Numbers together via POST</h1>
+	<hr>
+	<form th:action="@{/math/add}" th:object="${TwoNumberForm}"
+		method="POST" action="#">
+		<table>
+			<tr>
+				<td><label path="num1">Enter first Number</label></td>
+				<td><input path="num1" th:field="*{num1}"
+					onfocus="this.value=''" /></td>
+			</tr>
+			<tr>
+				<td><label path="num2">Enter Second Number</label></td>
+				<td><input path="num2" th:field="*{num2}"
+					onfocus="this.value=''" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Submit" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
